@@ -7,6 +7,7 @@ The purpose of this article is to see different use cases of annotations and how
 ## The core ones
 
 The package `java.lang` provides a set of basic annotations
+
 * `Deprecated`
 * `FunctionalInterface`
 * `Override`
@@ -21,6 +22,7 @@ They have no effect nor implication with OOP. A class or method with or without 
 Dependency injection tools usually use annotations.
 
 The Java EE ones :
+
 * `Inject`
 * `Singleton`
 * `Resource`
@@ -28,10 +30,12 @@ The Java EE ones :
 * …
 
 Or custom ones :
+
 * `Autowired`
 * …
 
 These annotations clearly break principles/good practices with OOP :
+
 * Coupling : the code of an object becomes coupled to the dependency injection annotations
 * Encapsulation : when injection is applied to the private state of the object, it is exposing this inner state to an external components
 
@@ -103,6 +107,7 @@ For the `Service` class, it is even worse as the "private" field will get access
 ## Swiss army knife data structure
 
 One of the main motivation for introducing the annotations in Java in the first place was to provide metadata for library like :
+
 * Xml/Json serializations
 * ORM/Entity mapping with data storage
 * Bean code generation
@@ -112,6 +117,7 @@ All these usage apply not to objects but to data structures, and try to reduce t
 Using data structures is a useful programming technique (usually come along "procedural programming") that makes easier to add new functionalities on top of a fixed structure, while OOP makes easier to add new classes without changing the functionalities.
 
 The purpose of annotations here is to configure the functionalities running on top of the structure. It doesn't break this principle as we are not modifying the structure itself. The only concern is a little bit of code pollution and compilation dependencies :
+
 * you cannot compile the data structure without the functionality library. So for example, I will have to embed a Json library in my jar, even if I never use the serialization functionality in my code
 * you could end up having business logic data structure having package dependencies to both data layer implementation and view serialization implementation
 
