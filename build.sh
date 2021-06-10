@@ -10,7 +10,7 @@ do
   target_file="$(basename ${source} .md).html"
   echo "Transforming ${source} to ${target_dir}/${target_file}"
   mkdir -p "${target_dir}"
-  pandoc "${source}" -s --template src/template.html > "${target_dir}/${target_file}"
+  pandoc "${source}" -M document-css=false -s --template src/template.html > "${target_dir}/${target_file}"
 done
 
 cp -f src/styles.css target/styles.css
