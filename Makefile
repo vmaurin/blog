@@ -19,3 +19,7 @@ serve: ## Serve mkdocs website locally on http://localhost:8000/
 generate: ## Generate the static website assets
 	docker run --rm -v "$(shell pwd):$(shell pwd)" -w "$(shell pwd)" blog \
 	mkdocs build -d public
+
+.PHONY: deploy
+deploy: ## Upload the site content
+	rsync -av public/ maurinh@ssh.cluster023.hosting.ovh.net:vmtech/
