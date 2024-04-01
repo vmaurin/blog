@@ -1,3 +1,10 @@
+---
+date: 2018-04-18
+categories:
+  - Java
+  - Design
+---
+
 # Java annotations and OOP
 
 Annotations has been introduced in JDK 1.5 in order to put metadata along with the code. These metadata are available at compile time, or at runtime through reflection.

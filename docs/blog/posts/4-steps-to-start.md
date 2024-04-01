@@ -1,3 +1,9 @@
+---
+date: 2018-12-02
+categories:
+  - Practices
+---
+
 # 4 Steps to properly start a software project
 
 As Software Engineers, we are all dealing with legacy projects. Sometimes we face a big ball of mud, sometimes we have to deal with an outdated framework spread everywhere. These situations are usually resulting from mistakes made early in a project’s life. It is important to avoid the common ones not to create a new piece of technical debt. I will give you four simple steps that will help you avoid these common pitfalls when starting a project and ensure its proper growth.
